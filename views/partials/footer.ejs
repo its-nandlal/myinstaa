@@ -1,0 +1,58 @@
+
+
+<% if (footer === true) { %>
+  
+  <div id="sectionS" class="fixed z-[2] pointer-events-[all] bottom-[3rem] left-[50%] translate-x-[-50%] w-[95%] h-0 rounded-t-2xl bg-[#0000006a] backdrop-blur-md overflow-hidden overflow-y-scroll text-white">
+
+    <div class="relative">
+      <div class="absolute top-0 left-0 z-[1] pl-2 py-[.8rem]">
+          <svg aria-label="Explore" class="text-black" fill="currentColor" height="15" role="img" viewBox="0 0 24 24" width="15"><title>Explore</title><path d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="16.511" x2="22" y1="16.511" y2="22"></line></svg></div>
+      <input id="SearchInput" class="s w-full px-2 pl-8 py-2 outline-none text-black placeholder-black bg-[#ffffff47] backdrop-blur-2xl" type="search" placeholder="Search">
+    </div>
+
+    <div class="serachU">
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+<div class="fixed bottom-0 left-0 w-full h-fit px-2 py-3 flex items-center justify-around bg-black text-white border-t-[1.5px] border-zinc-700">
+
+    <a href="feed">
+        <svg aria-label="Home" class=" text-white" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Home</title><path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"></path></svg>
+    </a>
+
+    <a id="search">
+        <svg aria-label="Explore" class="text-white" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Explore</title><path d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="16.511" x2="22" y1="16.511" y2="22"></line></svg>
+    </a>
+
+    <a >
+        <svg aria-label="Reels" class=" text-white" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+    </a>
+
+    <a href="profile">
+        <span class="block w-[24px] h-[24px] p-[.05rem] bg-white rounded-full overflow-hidden">
+          <img class="w-full h-full rounded-full" src="/images/uploads/dp/<%= user.dp %>" alt="">
+        </span>
+    </a>
+
+  </div>
+
+<% } %>
+
+
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/javascripts/script.js"></script>
+
+</body>
+</html>

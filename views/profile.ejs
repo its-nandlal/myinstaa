@@ -1,0 +1,94 @@
+<% include ./partials/header.ejs %>
+
+    <div class="w-full min-h-screen bg-black mt-[3rem]">
+
+        <!-- TOP SECTION -->
+
+        <div class="border-b-[1.5px] border-[#ffffff29] pb-[1.5rem]">
+
+            <div class="mt-[4rem] pr-1 w-full flex items-center justify-end gap-2 shrink-0 ">
+                <span class="block text-[.8rem] py-[.2rem] px-3 bg-[#ffffff33] backdrop-blur-xl rounded-lg">12
+                    Post</span>
+                <span class="block text-[.8rem] py-[.2rem] px-3 bg-[#ffffff33] backdrop-blur-xl rounded-lg">100
+                    Followers</span>
+                <span class="block text-[.8rem] py-[.2rem] px-3 bg-[#ffffff33] backdrop-blur-xl rounded-lg">95
+                    Following</span>
+            </div>
+
+            <div class="w-full min-h-[20vh]  px-2 py-2 pb-[1rem] flex">
+
+                <div
+                    class="w-[5.5rem] h-[5.5rem] p-[.14rem] bg-gradient-to-r from-[#f2ff35] to-[#ff3b79] rounded-full overflow-hidden shrink-0">
+                    <img class="w-full h-full object-cover rounded-full bg-zinc-200"
+                        src="/images/uploads/dp/<%= user.dp %>" alt="">
+                </div>
+
+                <div class="pl-4 flex flex-col">
+                    <span class="block mt-1 text-[1.1rem]"><%= user.username %></span>
+                    <p class="text-[.8rem] pr-16 h-20 overflow-hidden"><%= user.bio %></p>
+                </div>
+
+            </div>
+
+            <div class="w-full ml-2 flex items-center">
+                <a class="block w-fit text-[.9rem] py-1 px-4 bg-[#ffffff33] backdrop-blur-xl rounded-lg cursor-pointer" href="/edit">Edit Profile</a>
+            </div>
+
+
+        </div>
+
+
+        <!-- SECTION FOR FECTURE -->
+
+        <div class="w-full py-4 flex items-center justify-evenly gap-2">
+
+            <div class="pmenu"> 
+                <svg aria-label="posts " id="posts" class="psvg text-[blue]" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Posts</title><rect fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="18" x="3" y="3"></rect><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="9.015" x2="9.015" y1="3" y2="21"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="14.985" x2="14.985" y1="3" y2="21"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="21" x2="3" y1="9.015" y2="9.015"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="21" x2="3" y1="14.985" y2="14.985"></line></svg>
+            </div>
+
+            <div class="pmenu">
+                <svg aria-label="Feed" class="psvg" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Feed</title><rect fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="12" x="6" y="7"></rect><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" x1="6.002" x2="18" y1="3.004" y2="3.004"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" x1="6.002" x2="18" y1="21" y2="21"></line></svg>
+            </div>
+
+            <div class="pmenu">
+                <svg aria-label="Reels" class="psvg" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+             </div>
+
+             <div class="pmenu">
+                <svg data-users="<%= user.id %>" aria-label="savePost" id="savePost" class="psvg" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Saved</title><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+              </div>
+
+        </div>
+
+
+        <div class="userPosts relative flex items-center gap-1 flex-wrap">
+
+            <% user.posts.reverse().forEach((elem)=>{ %>
+
+                <div class="w-[7.64rem] h-[7.64rem] bg-zinc-400">
+                    <img class="w-full h-full object-cover bg-center" src="/images/uploads/posts/<%= elem.postImage %>" alt="">
+                </div>
+
+
+        <% }) %>
+
+
+        <div class="svae absolute top-0 left-0 w-full h-full flex items-center gap-1 flex-wrap bg-black">
+
+        </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascripts/profile.js"></script>
+
+
+    <% include ./partials/footer.ejs %>

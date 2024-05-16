@@ -1,0 +1,69 @@
+<% include ./partials/header.ejs %>
+
+<div class="w-full h-[95vh]">
+
+    <div class="w-full px-2 py-2 flex items-center justify-between bg-black text-white border-b-[1.5px] border-zinc-700">
+        
+        <div class="flex items-center">
+            <a href="profile" class="flex items-center text-blue-500 my-auto"><i class="my-auto ri-arrow-left-s-line text-[24px]"></i>Profile</a>  
+        </div>
+    
+        <div>
+            <span>Edit Profile</span>
+        </div>
+    
+        <div class="flex items-center gap-4">
+        <a href="feed" class="flex items-center gap-1 text-[.9rem]"><svg aria-label="Home" class=" text-white" fill="currentColor" height="18" role="img" viewBox="0 0 24 24" width="18"><title>Home</title><path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"></path></svg> Home</a>
+        </div>
+    
+    
+      </div>
+    
+    <div class="w-full flex items-center justify-center py-8">
+
+        <div class="relative z-10">
+
+            <div   class="relative w-[7rem] h-[7rem] bg-white p-[.16rem] rounded-full overflow-hidden">
+
+                <!-- <img class=" w-full h-full object-cover bg-center rounded-full" src="" alt=""> -->
+                <img class="dpimg w-full h-full object-cover bg-center rounded-full" src="/images/uploads/dp/<%= user.dp %>" alt="">
+            </div>
+
+            <button id="dpchang" class="absolute z-10 cursor-pointer bottom-0 right-0 w-8 h-8 bg-[#57575773] backdrop-blur-xl rounded-full flex items-center justify-center">
+                <i class="ri-pencil-line"></i>
+            </button>
+
+
+        </div>
+
+    
+    </div>
+
+    <form class="flex flex-col items-center gap-4"
+     action="/edit" method="post" enctype="multipart/form-data">
+        <input id="dpinput"  type="file" name="dpimage" value="<%= user.dp %>">
+
+        <input class="w-[95%] px-4 py-2 border-[2px] border-[#2f2f2f] rounded-xl bg-transparent outline-2 outline-blue-500"
+        type="text" name="name" placeholder="Name" value="<%= user.name %>">
+
+        <input class="w-[95%] px-4 py-2 border-[2px] border-[#2f2f2f] rounded-xl bg-transparent outline-2 outline-blue-500"
+        type="text" name="username" placeholder="Username" value="<%= user.username %>" >
+
+        <input class="w-[95%] px-4 py-2 border-[2px] border-[#2f2f2f] rounded-xl bg-transparent outline-2 outline-blue-500"
+        type="number" name="contact" placeholder="contact" value="<%= user.contact %>">
+
+        <textarea class="w-[95%] px-4 py-2 border-[2px] border-[#2f2f2f] rounded-xl bg-transparent outline-2 outline-blue-500"
+        name="bio" id="" placeholder="Add Bio..."><%= user.bio %></textarea>
+        
+        <input class=" w-[95%] px-4 py-2 tracking-wider font-semibold bg-blue-700 rounded-xl"
+        type="submit" value="Save">
+
+    </form>
+
+
+</div>
+
+
+<script src="/javascripts/edit.js"></script>
+
+<% include ./partials/footer.ejs %>

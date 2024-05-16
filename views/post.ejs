@@ -1,0 +1,50 @@
+<% include ./partials/header.ejs %>
+
+<div class="w-full h-[95vh]">
+
+    <div class="w-full px-2 py-2 flex items-center justify-between bg-black text-white border-b-[1.5px] border-zinc-700">
+        
+        <div class="flex items-center">
+            <a href="profile" class="flex items-center text-blue-500 my-auto"><i class="my-auto ri-arrow-left-s-line text-[24px]"></i>Profile</a>  
+        </div>
+    
+        <div>
+            <span>Upload post</span>
+        </div>
+    
+        <div class="flex items-center gap-4">
+        <a href="feed" class="flex items-center gap-1 text-[.9rem]"><svg aria-label="Home" class=" text-white" fill="currentColor" height="18" role="img" viewBox="0 0 24 24" width="18"><title>Home</title><path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"></path></svg> Home</a>
+        </div>
+    
+    
+      </div>
+    
+    <div class="flex flex-col gap-2">
+        <div class="w-full h-[55vh] bg-zinc-500">
+            <img class="postImg w-full h-full object-contain bg-center" src="" alt="">
+        </div>
+    
+        <form action="/post" method="post" enctype="multipart/form-data" 
+        class="w-full px-2 flex flex-col items-center gap-3 text-black">
+        
+        <label class="w-[85%] py-2 text-center px-6 bg-blue-700 text-white tracking-wider font-semibold rounded-md"
+         for="file-input">Select Image
+
+        <input hidden id="file-input" type="file" name="postImg">
+    </label>
+
+            <textarea class="w-full outline-2 outline-blue-500 py-4 px-3"
+             name="postCaption" id="" placeholder="Caption..."></textarea>
+    
+             <input class="w-[95%] py-2 px-6 bg-blue-700 text-white tracking-wider font-semibold rounded-md" 
+             type="submit" value="Public">
+    
+        </form>
+    </div>
+
+
+</div>
+
+<script src="/javascripts/post.js"></script>
+
+<% include ./partials/footer.ejs %>
